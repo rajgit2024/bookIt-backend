@@ -9,7 +9,11 @@ import userRoutes from "./routes/userRoutes.js"
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "*", // frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true, // Allows credentials (cookies, Authorization header)
+}));
 app.use(express.json());
 
 app.use("/api/experiences", experienceRoutes);
