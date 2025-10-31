@@ -5,7 +5,19 @@ INSERT INTO experiences (title, description, image_url, base_price)
 VALUES
 ('Sunset Kayak Tour', 'Enjoy an evening kayak tour with a beautiful sunset.', 'https://images.unsplash.com/photo-1', 25.00),
 ('City Food Walk', 'Explore the best local bites with a friendly guide.', 'https://images.unsplash.com/photo-2', 40.00),
-('Mountain Hike', 'A moderate hike with great views and picnic.', 'https://images.unsplash.com/photo-3', 30.00)
+('Mountain Hike', 'A moderate hike with great views and picnic.', 'https://images.unsplash.com/photo-3', 30.00),
+(
+  'Temple Visit Tour',
+  'A peaceful day exploring ancient temples, rituals, and cultural heritage.',
+  'https://i.ibb.co/mc9WL6q/temple-tour.jpg',
+  40.00
+),
+(
+  'River Rafting Adventure',
+  'Experience the thrill of white-water rafting with professional guides and scenic views.',
+  'https://i.ibb.co/Tv2N7cM/river-rafting.jpg',
+  80.00
+)
 RETURNING id;
 
 -- Slots

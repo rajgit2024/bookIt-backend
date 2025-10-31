@@ -13,7 +13,8 @@ export const createBookingHandler = async (req, res) => {
     seats_booked = 1,
     promo_code = null,
   } = req.body;
-
+  console.log("📥 Incoming booking data:", req.body);
+    console.log("👤 User:", req.user);
   if (!experience_id || !slot_id || !user_name || !user_email) {
     return res.status(400).json({ success: false, error: "Missing required fields" });
   }
