@@ -5,12 +5,16 @@ import experienceRoutes from "./routes/experienceRoutes.js";
 import bookingRoutes from "./routes/bookingRoutes.js";
 import promoRoutes from "./routes/promoRoutes.js";
 import userRoutes from "./routes/userRoutes.js"
+const cookieParser = require("cookie-parser");
 
 dotenv.config();
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
+
 app.use(cors({
-  origin: "*", // frontend URL
+  origin: process.env.REACT_APP_API_URL, // frontend URL
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true, // Allows credentials (cookies, Authorization header)
 }));
