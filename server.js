@@ -5,7 +5,7 @@ import experienceRoutes from "./routes/experienceRoutes.js";
 import bookingRoutes from "./routes/bookingRoutes.js";
 import promoRoutes from "./routes/promoRoutes.js";
 import userRoutes from "./routes/userRoutes.js"
-const cookieParser = require("cookie-parser");
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 const app = express();
