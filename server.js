@@ -13,6 +13,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+
 app.use(cors({
   origin: process.env.REACT_APP_API_URL, // frontend URL
   methods: ["GET", "POST", "PUT", "DELETE"],
