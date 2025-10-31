@@ -4,6 +4,6 @@ import { createBookingHandler } from "../controllers/bookingController.js";
 import { authMiddleware } from "../middleware/authMiddleware.js";
 const router = express.Router();
 
-router.post("/",authMiddleware, createBookingHandler);
+router.post("/", createBookingHandler);
 
 export default router;
